@@ -25,12 +25,11 @@ public class Window {
 		frame.setResizable(false);
 		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		//frame.setBackground(new Color(0, 210, 108));
 
 		JPanel panel = new JPanel();
 		panel.setBorder(new EmptyBorder(5, 5, 5, 5));
 		panel.setLayout(null);
-		panel.setBackground(new Color(0, 210, 108));
+		panel.setBackground(new Color(0, 188, 94));
 
 		log = new JTextArea();
 		log.setBounds(10, 10, frame.getWidth() - 25, frame.getHeight() - 75);
@@ -40,7 +39,7 @@ public class Window {
 		DefaultCaret caret = (DefaultCaret)log.getCaret();
 		caret.setUpdatePolicy(DefaultCaret.ALWAYS_UPDATE);
 		log.setFont(new Font("Courier", Font.PLAIN, 14));
-		log.append("Vex Chat v" + Client.S_VERSION + "\n\n");
+		log.append("Family Chat v" + Client.S_VERSION + "\n\n");
 
 		scroll = new JScrollPane(log);
 		scroll.setBounds(10, 10, frame.getWidth() - 25, frame.getHeight() - 75);

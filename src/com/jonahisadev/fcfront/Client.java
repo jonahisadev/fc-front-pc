@@ -40,6 +40,8 @@ public class Client extends Thread {
 				if (args[0].equals("/c/")) {
 					if (args[1].equals("OK"))
 						Window.log("We got a connection!");
+					else if (args[1].equals("BADNAME"))
+						Window.log("Username already taken. Please try again.");
 				}
 				
 				//
@@ -77,6 +79,7 @@ public class Client extends Thread {
 	public void handleCommand(String cmd) {
 		if (cmd.equals("exit")) {
 			sendData("/x/~");
+			System.exit(0);
 		}
 	}
 	
