@@ -39,7 +39,7 @@ public class Client extends Thread {
 				//
 				if (args[0].equals("/c/")) {
 					if (args[1].equals("OK"))
-						Window.log("We got a connection!");
+						Window.log("Connection successful");
 					else if (args[1].equals("BADNAME"))
 						Window.log("Username already taken. Please try again.");
 				}
@@ -49,6 +49,13 @@ public class Client extends Thread {
 				//
 				else if (args[0].equals("/m/")) {
 					Window.log("[" + args[1] + "] " + args[2]);
+				}
+				
+				//
+				//	/s/
+				//
+				else if (args[0].equals("/s/")) {
+					Window.log("[SERVER] " + args[1]);
 				}
 
 				//
